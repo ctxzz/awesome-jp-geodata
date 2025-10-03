@@ -70,7 +70,3 @@ python3 -m http.server 8080
 - **JavaScript (ES6+)**: フィルタリングとDOM操作
 - **Chart.js**: データ可視化用（将来の拡張用）
 - **Google Fonts**: Inter & Noto Sans JP
-
-## 📝 ライセンス
-
-このプロジェクトはオープンソースです。
