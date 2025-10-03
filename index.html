@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の地理空間データ エクスプローラー</title>
+    <!-- Chosen Palette: Calm & Harmonious -->
+    <!-- Application Structure Plan: A dashboard-style SPA. The structure starts with a high-level overview (Paid vs Free, sources per category) for quick insights. The core is an interactive explorer with filterable cards, allowing users to find specific data sources easily. A final section provides a deeper analysis of the cost structure within each category. This non-linear, explorable structure is better than a static list for users who need to find specific information quickly. -->
+    <!-- Visualization & Content Choices: 1. Paid vs Free Split -> Goal: Inform -> Viz: Donut Chart (Chart.js) -> Justification: Clear proportion visualization. 2. Sources per Category -> Goal: Compare -> Viz: Bar Chart (Chart.js) -> Justification: Easy comparison of discrete categories. 3. Data Source List -> Goal: Organize/Explore -> Viz: Interactive Card Grid (HTML/JS) -> Justification: Modern, user-friendly alternative to static tables, allows filtering. 4. Paid/Free within Categories -> Goal: Compare Composition -> Viz: Stacked Bar Chart (Chart.js) -> Justification: Shows composition and total simultaneously for deeper insight. CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .filter-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .filter-btn.active {
+            background-color: #7D8F69 !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#7D8F69] mb-3">日本の地理空間データ エクスプローラー</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">日本の多様な地理空間データソースをまとめました。インタラクティブなフィルターで、あなたのプロジェクトに最適なデータを見つけることができます。</p>
+        </header>
+
+        <section id="explorer" class="mb-12">
+            <div id="filters" class="flex flex-wrap justify-center gap-4 mb-8">
+                <div>
+                    <span class="font-bold mr-2 text-gray-700">カテゴリ:</span>
+                    <div class="inline-flex rounded-md shadow-sm" role="group" id="category-filter-group">
+                        <button type="button" class="filter-btn active px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="all">全て</button>
+                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="A">人流・人口</button>
+                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="B">不動産・建物</button>
+                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="C">地図・基盤</button>
+                    </div>
+                </div>
+                 <div>
+                    <span class="font-bold mr-2 text-gray-700">費用:</span>
+                    <div class="inline-flex rounded-md shadow-sm" role="group" id="cost-filter-group">
+                        <button type="button" class="filter-btn active px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="all">全て</button>
+                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="無料">無料</button>
+                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#A2B29F]" data-filter="有料">有料</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataSourceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p class="text-sm">日本の地理空間データ エクスプローラー &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
