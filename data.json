@@ -367,5 +367,95 @@
         "category": "E",
         "access": "Webサイト, データダウンロード",
         "url": "https://www.maff.go.jp/j/tokei/census/shuraku_data/index.html"
+    },
+    {
+        "name": "海流GIS情報",
+        "provider": "海上保安庁海洋情報部",
+        "description": "黒潮、津軽暖流、対馬暖流、宗谷暖流の流線を、海洋速報の号別・月別にShapefile／KMLで提供。流線は概位であり、海流図と比較して1〜2海里程度の誤差を含む。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード, Webサイト",
+        "url": "https://www1.kaiho.mlit.go.jp/KANKYO/KAIYO/qboc/kurosio-num.html"
+    },
+    {
+        "name": "JAMSTEC DARWIN",
+        "provider": "海洋研究開発機構（JAMSTEC）",
+        "description": "調査船・潜水船で得られた観測データ、航海・潜航情報、サンプル情報を検索・ダウンロードできるデータリポジトリ。2024年にリニューアルし、地図上からの範囲検索機能を提供。",
+        "cost": "無料",
+        "category": "C",
+        "access": "Webサイト, データダウンロード",
+        "url": "https://www.godac.jamstec.go.jp/darwin/ja/"
+    },
+    {
+        "name": "気象庁 予報区等GISデータ",
+        "provider": "気象庁",
+        "description": "気象庁防災情報XMLで用いる、予報区・警報等・土砂災害・地震津波・火山・津波の発表区域をShapefileで提供。JGD2011で作成され、2026年にも区域更新を反映。",
+        "cost": "無料",
+        "category": "D",
+        "access": "データダウンロード",
+        "url": "https://www.data.jma.go.jp/developer/gis.html"
+    },
+    {
+        "name": "2024年基準の地震動予測地図",
+        "provider": "防災科学技術研究所",
+        "description": "地震発生確率の基準日を2024年1月とした全国地震動予測地図。地図の表示・ダウンロードに加え、地震ハザード、ハザードカーブ等のAPIを提供。",
+        "cost": "無料",
+        "category": "D",
+        "access": "Webサイト, データダウンロード, API",
+        "url": "https://www.j-shis.bosai.go.jp/news-20240719"
+    },
+    {
+        "name": "産総研 活断層データベース",
+        "provider": "産業技術総合研究所 地質調査総合センター",
+        "description": "起震断層・活動セグメント、関連する地震、調査地点の情報を地図検索・ダウンロードで提供。2026年6月には瀬戸内周辺22セグメントと調査地約800件を更新。商業利用は許可が必要な場合がある。",
+        "cost": "無料",
+        "category": "D",
+        "access": "Webサイト, データダウンロード",
+        "url": "https://gbank.gsj.jp/activefault/"
+    },
+    {
+        "name": "国立公園区域等",
+        "provider": "環境省生物多様性センター",
+        "description": "国立公園、特別保護地区、国指定鳥獣保護区、自然環境保全地域等の区域ポリゴンをShapefileで提供。指定区域の概要を示すデータであり、法的な区域確認は管轄機関への照会が必要。",
+        "cost": "無料",
+        "category": "D",
+        "access": "データダウンロード",
+        "url": "https://www.biodic.go.jp/nps_nwp_nca_cz.html"
+    },
+    {
+        "name": "交通事故統計情報のオープンデータ（2024年分）",
+        "provider": "警察庁",
+        "description": "全国の交通事故について、事故発生状況等の詳細データ、ファイル定義書、コード表を公開。事故多発地点解析ツールと、事故発生箇所を地図化するための資料も提供する。",
+        "cost": "無料",
+        "category": "F",
+        "access": "データダウンロード, Webサイト",
+        "url": "https://www.npa.go.jp/publications/statistics/koutsuu/opendata/index_opendata.html"
+    },
+    {
+        "name": "JARTICオープンデータ",
+        "provider": "日本道路交通情報センター",
+        "description": "都道府県警察が保有する交通規制、断面交通量、交差点制御情報を都道府県別に提供。交通規制は自動運転・安全運転支援向けの拡張版標準フォーマットで、毎月更新される。",
+        "cost": "無料",
+        "category": "F",
+        "access": "データダウンロード, API, Webサイト",
+        "url": "https://www.jartic.or.jp/service/opendata/"
+    },
+    {
+        "name": "幕末期近世村領域データセット",
+        "provider": "ROIS-DS 人文学オープンデータ共同利用センター",
+        "description": "幕末期（慶応年間頃）の近世村の領域・点データを公開。2025年9月に公開され、約66,581件を収録する。現代の農業集落境界を基に加工しているため、歴史的境界との差異に注意が必要。",
+        "cost": "無料",
+        "category": "G",
+        "access": "データダウンロード, Webサイト",
+        "url": "https://geoshape.ex.nii.ac.jp/av/"
+    },
+    {
+        "name": "医療情報ネットのオープンデータ",
+        "provider": "厚生労働省",
+        "description": "病院、診療所、歯科診療所、助産所、薬局の施設情報、診療科・診療時間をCSVで提供。2026年6月1日時点のデータを公開しており、公共データ利用規約（PDL1.0）が適用される。",
+        "cost": "無料",
+        "category": "G",
+        "access": "データダウンロード",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html"
     }
 ]
