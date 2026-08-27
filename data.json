@@ -126,13 +126,31 @@
         "url": "https://www.rosenka.nta.go.jp/"
     },
     {
-        "name": "登記所備付地図データ",
-        "provider": "法務省",
-        "description": "土地の区画（筆）と地番を示す公的な地図。正確性が非常に高い。",
-        "cost": "有料",
+        "name": "登記所備付地図データ（2026年版・変換済）",
+        "provider": "法務省・G空間情報センター",
+        "description": "全国の登記所備付地図のうち公共座標付き図郭を、GISで扱いやすいシェープファイル・GeoJSON形式に変換したデータ。2026年版は2026年2月時点の地図データに基づく。",
+        "cost": "無料",
         "category": "B",
-        "access": "データ購入",
-        "url": "https://front.geospatial.jp/moj-chizu-xml-readme/moj-chizu-xml-download/"
+        "access": "データダウンロード",
+        "url": "https://front.geospatial.jp/moj-chizu-xml-readme/moj-chizu-shp-download/"
+    },
+    {
+        "name": "静岡県都市計画基礎調査",
+        "provider": "静岡県都市局都市計画課",
+        "description": "都市計画法第6条に基づく概ね5年ごとの調査。人口、産業、土地利用、都市施設、地価、自然環境、公害・災害等のデータを公開し、2026年には南伊豆町などの市町村データを追加。",
+        "cost": "無料",
+        "category": "B",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/dataset/tosikeikaku202306minamiizu"
+    },
+    {
+        "name": "北海道 土地連絡図・査定図等",
+        "provider": "北海道農政部",
+        "description": "明治29年から昭和41年に北海道内で実施された土地連絡調査の成果や境界査定図を公開する歴史資料群。筆界を考える参考図面だが、単独で筆界を確定するものではない。",
+        "cost": "無料",
+        "category": "B",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/organization/hokkaidopref-ns"
     },
     {
         "name": "e-Govデータポータル",
@@ -223,5 +241,23 @@
         "category": "C",
         "access": "Webサイト",
         "url": "https://gtfs-data.jp/"
+    },
+    {
+        "name": "3次元電子国土基本図",
+        "provider": "国土交通省 国土地理院",
+        "description": "建物、道路中心線、鉄道中心線に高さを付与した電子国土基本図。2026年4月に提供開始し、全国整備を進行中。データは数値地図（国土基本情報）に格納される。",
+        "cost": "有料",
+        "category": "C",
+        "access": "データ購入, Webサイト",
+        "url": "https://www.gsi.go.jp/kibanjoho/mapinfo3D.html"
+    },
+    {
+        "name": "島根県 河川DEM・グラウンドデータ",
+        "provider": "島根県土木部河川課",
+        "description": "島根県管理河川の左右岸から20mの範囲で実施した航空レーザ測量成果を基に作成した、1m解像度の数値標高モデルと地表遮蔽物を除去したグラウンドデータ。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/organization/shimane-kasen"
     }
 ]
