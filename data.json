@@ -259,5 +259,113 @@
         "category": "C",
         "access": "データダウンロード",
         "url": "https://www.geospatial.jp/ckan/organization/shimane-kasen"
+    },
+    {
+        "name": "R07年度 大阪市航空写真",
+        "provider": "大阪市計画調整局",
+        "description": "2026年1月に撮影された大阪市全域の航空写真。低解像度の全域版と区別のGeoTIFFを公開。公共測量成果の複製等では承認が必要な場合がある。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/dataset/r07"
+    },
+    {
+        "name": "静岡県 漁港台帳",
+        "provider": "静岡県交通基盤部漁港整備課",
+        "description": "静岡県が管理する漁港の台帳、漁港施設のGISデータ、3D都市モデルを公開。戸田、静浦、稲取、妻良、焼津のデータを含む。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/dataset/shizuoka-gyokou"
+    },
+    {
+        "name": "アドレス・ベース・レジストリ（町字マスター）",
+        "provider": "デジタル庁",
+        "description": "自治体確認済みの町字データを2025年6月に正式版として公開した、住所・所在地関係の基盤データベース。位置参照付きデータ等には試験公開版が含まれる。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード, Webサイト",
+        "url": "https://dataset.address-br.digital.go.jp/"
+    },
+    {
+        "name": "JAXA Earth API",
+        "provider": "宇宙航空研究開発機構（JAXA）",
+        "description": "100以上の地球観測データセットをCOG・STAC形式で横断的に取得できるデータ配信サービス。Python・JavaScript用APIを無償提供し、各データのライセンスは個別に確認する。",
+        "cost": "無料",
+        "category": "C",
+        "access": "API, データダウンロード",
+        "url": "https://data.earth.jaxa.jp/ja/"
+    },
+    {
+        "name": "シームレス標高タイル v2",
+        "provider": "産業技術総合研究所 地質調査総合センター",
+        "description": "標高データをWeb地図向けタイルとして提供するサービス。2026年6月にv2を正式公開し、WebP・512pxタイルと内閣府地形データ等を追加。",
+        "cost": "無料",
+        "category": "C",
+        "access": "API, Webサイト",
+        "url": "https://gbank.gsj.jp/seamless/elev/index.html"
+    },
+    {
+        "name": "現存植生図2024",
+        "provider": "環境省生物多様性センター",
+        "description": "2000〜2023年度の調査に基づく全国の植生ポリゴンデータ。植物社会学的群落分類による876凡例と植生自然度等の属性を持つ。",
+        "cost": "無料",
+        "category": "D",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/dataset/biodic_veg2024"
+    },
+    {
+        "name": "宅地造成等工事規制区域・特定盛土等規制区域データ（2025年度版）",
+        "provider": "国土交通省",
+        "description": "地方公共団体が指定する盛土規制区域の範囲・区分等を整備したGISデータ。概略位置を示すものであり、法的図書や重要事項説明・申請の根拠には利用できない。",
+        "cost": "無料",
+        "category": "D",
+        "access": "データダウンロード",
+        "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A56-2025.html"
+    },
+    {
+        "name": "1:25,000活断層図（2025年新規公開分）",
+        "provider": "国土交通省 国土地理院",
+        "description": "能登半島北部6面を含む12面を2025年12月に追加公開した、活断層の位置と関連地形を示す詳細地図。防災・減災、地域計画等に活用できる。",
+        "cost": "無料",
+        "category": "D",
+        "access": "Webサイト, データダウンロード",
+        "url": "https://www.gsi.go.jp/bousaichiri/afm_koukai_2025.html"
+    },
+    {
+        "name": "強震動データプラットフォーム",
+        "provider": "防災科学技術研究所",
+        "description": "日本国内の強震動観測記録を、地震・観測点・地盤条件から検索・利用できるプラットフォーム。K-NET・KiK-net等の観測記録と震源・地盤情報を関連付けて提供する。",
+        "cost": "無料",
+        "category": "D",
+        "access": "Webサイト, データダウンロード",
+        "url": "https://www.j-smdp.bosai.go.jp/"
+    },
+    {
+        "name": "伊豆大島火山地質図（第2版）",
+        "provider": "産業技術総合研究所 地質調査総合センター",
+        "description": "2026年発行の伊豆大島の火山地質図。公開用にJPEG、GeoTIFF、KML、PDFを提供し、火山防災や地質解析に利用できる。",
+        "cost": "無料",
+        "category": "D",
+        "access": "データダウンロード",
+        "url": "https://www.gsj.jp/Map/JP/volcano.html#10"
+    },
+    {
+        "name": "国有林GISデータ（2024年度版）",
+        "provider": "林野庁",
+        "description": "2024年4月1日時点の国有林野における小班区画ポリゴン等を整備した全国データ。都道府県別にダウンロードできる。",
+        "cost": "無料",
+        "category": "E",
+        "access": "データダウンロード",
+        "url": "https://www.geospatial.jp/ckan/dataset/nfgis-2024"
+    },
+    {
+        "name": "地域の農業を見て・知って・活かすDB（2025年農業集落基準）",
+        "provider": "農林水産省統計部",
+        "description": "全国約15万の農業集落を単位に、農林業センサス・行政情報・農業集落境界・筆ポリゴンを提供する総合データベース。2026年に2025年基準データを順次公開。",
+        "cost": "無料",
+        "category": "E",
+        "access": "Webサイト, データダウンロード",
+        "url": "https://www.maff.go.jp/j/tokei/census/shuraku_data/index.html"
     }
 ]
