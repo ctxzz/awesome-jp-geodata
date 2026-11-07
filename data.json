@@ -72,6 +72,15 @@
         "url": "https://nlftp.mlit.go.jp/ksj/index.html#collapsible-body__persontrip"
     },
     {
+        "name": "令和7年国勢調査",
+        "provider": "総務省統計局",
+        "description": "2025年10月1日現在で実施された国勢調査。2026年5月に人口速報集計、9月に人口等基本集計を公表。小地域集計は今後公表予定のため、現時点の小地域分析には令和2年調査を併用する。",
+        "cost": "無料",
+        "category": "A",
+        "access": "Webサイト, データダウンロード, API",
+        "url": "https://www.e-stat.go.jp/stat-search/database?page=1&toukei=00200521&tstat=000001230925"
+    },
+    {
         "name": "ゼンリン",
         "provider": "株式会社ゼンリン",
         "description": "住宅地図: 建物形状、名称、番地まで網羅した詳細地図。 建物属性データ: 階数、構造、用途など、分析に有用な情報が豊富。",
@@ -151,6 +160,15 @@
         "category": "B",
         "access": "データダウンロード",
         "url": "https://www.geospatial.jp/ckan/organization/hokkaidopref-ns"
+    },
+    {
+        "name": "地価公示・都道府県地価調査（2026年版）",
+        "provider": "国土交通省",
+        "description": "国土数値情報として整備した2026年（令和8年）の地価公示・都道府県地価調査の標準地・基準地ポイントデータ。都道府県地価調査は2026年9月に公開。",
+        "cost": "無料",
+        "category": "B",
+        "access": "データダウンロード",
+        "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L02-2026.html"
     },
     {
         "name": "e-Govデータポータル",
@@ -385,6 +403,15 @@
         "category": "C",
         "access": "Webサイト, データダウンロード",
         "url": "https://www.godac.jamstec.go.jp/darwin/ja/"
+    },
+    {
+        "name": "過去の地形データ（高度経済成長期）",
+        "provider": "国土交通省 国土地理院",
+        "description": "1960年代前後の空中写真からSfM-MVS処理等で作成した過去の地形データ。2026年3月に研究成果として公開され、現在の地形と比べて盛土・切土などの人工改変地を把握するのに使える。",
+        "cost": "無料",
+        "category": "C",
+        "access": "データダウンロード",
+        "url": "https://research-opendata.gsi.go.jp/tech_data/2026-002-G/2026-002-G-lp.html"
     },
     {
         "name": "気象庁 予報区等GISデータ",
